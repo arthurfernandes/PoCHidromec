@@ -1,0 +1,128 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 14, 2014, 7:11:19 PM
+    Author     : arthurfernandes
+*/
+
+html,body,#wrapper{
+    width:100%;
+    height:100%;
+    
+}
+
+#wrapper{
+    background-color: black;
+    background-image: url(../img/background3.png);
+    background-size: cover;
+    background-repeat: repeat;
+    overflow: auto;
+    top:0;
+    left:0;
+    position:fixed;
+}
+
+.formularioPrincipal{
+    border: inset rgb(0, 100, 100);
+    background-color: rgba(200,200,200,0.2);
+   
+    position: relative;
+    width: 80%;
+    height: max-content;
+    top: 5%;
+    min-height: 200px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.input_text{
+    border: inset rgb(0,0,0);
+    border-radius: 10px;
+    position: relative;
+    top: 24px;
+    width: inherit;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 16px;
+    color: #333333;
+    max-width: 50%;
+}
+
+.custom_label{
+    font-size: 16px;
+}
+
+.table_of_messages{
+    margin-top: 20px;
+    background-color: rgba(240,240,240,0.6);
+    border-style: hidden;
+}
+
+.table_of_messages th{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.command_div{
+    border: inset rgba(255,66,66,0.4);
+    border-radius: 10px;
+    background-color: rgba(233,233,233,0.15);    
+    position:relative;
+}
+
+.response_div{
+    margin-top: 10px;
+    border: inset rgba(255,66,66,0.4);
+    border-radius: 10px;
+    background-color: rgba(233,233,233,0.15);    
+    position:relative;
+}
+
+.big_text_box{
+    font-size: 25px;
+    font-family: Helvetica, Lucida Grande, Arial;
+    font-weight: bold;
+}
+
+.title_text{
+    
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+    position: relative;
+}
+
+.title_text h1{
+    font-size: 50px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    
+}
+
+.input_text_resposta{
+    margin-top: 6px;
+    width:80%;
+    max-width: 80%;
+    top: 0px;
+}
+
+.audio_div{
+    margin-top: 10px;
+    margin-left: 20%;
+    float:left;
+}
+
+.gpio_div{
+    margin-top:10px;
+    margin-right: 20%;
+    
+    float:right;
+}
+
+.gpio_div button{
+    margin-top: 3px;
+}
+
+.other_functions{
+    overflow: auto;
+}

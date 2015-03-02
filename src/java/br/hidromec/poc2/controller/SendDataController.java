@@ -42,8 +42,8 @@ public class SendDataController extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             Random rand = new Random();
             int i = rand.nextInt();
-            /* TODO output your page here. You may use following sample code. */
-            out.print("Message: " + i);
+            
+            out.println("Message: " + i);
         }
     }
 

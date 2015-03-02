@@ -16,22 +16,22 @@ function loadData(){
 
     xmlhttp.onreadystatechange = function(){
         var innerText;
-        if((xmlhttp.readyState == 4) && (xmlhttp.status == 200)){
+        if((xmlhttp.readyState === 4) && (xmlhttp.status === 200)){
             innerText = xmlhttp.responseText;
 
         }
-        else if(xmlhttp.readyState == 3){
+        else if(xmlhttp.readyState === 3){
             innerText = "Processando sua requisição.";
 
         }
-        else if(xmlhttp.status == 404){
+        else if(xmlhttp.status === 404){
             innerText = "Erro ao processar sua requisição.";
         }
-
+        
         document.getElementById("dado_recebido").value = innerText;
     };
 
-    xmlhttp.open("GET","SendCommandController",true);
+    xmlhttp.open("GET","Poc2/SendDataController",true);
     xmlhttp.send();
 }
 

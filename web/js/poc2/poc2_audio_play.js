@@ -18,17 +18,20 @@ function audio_play(){
         var innerText;
         if((xmlhttp.readyState === 4) && (xmlhttp.status === 200)){
             innerText = xmlhttp.responseText;
-
         }
         else if(xmlhttp.readyState === 3){
-            innerText = "Processando sua requisição.";
-
+            
         }
         else if(xmlhttp.status === 404){
-            innerText = "Erro ao processar sua requisição.";
+            innerText = "failed";
         }
 
-        document.getElementById("dado_recebido").value = innerText;
+        if(innerText.replace("\n","") == "failed"){
+            window.alert("Um erro ocorreu ao processar sua requisição.");
+        }
+        else if(innerText.replace("\n","") == "success"){
+            window.alert("Sucesso.");
+        }
     };
 
     xmlhttp.open("GET","Poc2/AudioPlayController",true);

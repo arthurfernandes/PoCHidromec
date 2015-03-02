@@ -17,6 +17,9 @@ import javax.servlet.http.HttpServletResponse;
 /**
  *
  * @author arthurfernandes
+ * 
+ * <p>This class represents the controller for playing audio when requested by 
+ * the user<p>
  */
 @WebServlet(name = "AudioPlayController", urlPatterns = {"/Poc2/AudioPlayController"})
 public class AudioPlayController extends HttpServlet {
@@ -34,16 +37,13 @@ public class AudioPlayController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet AudioPlayController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet AudioPlayController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            /*Plays audio command*/
+            if(true){
+                out.println("success");
+            }
+            else{
+                out.println("failed");
+            }
         }
     }
 

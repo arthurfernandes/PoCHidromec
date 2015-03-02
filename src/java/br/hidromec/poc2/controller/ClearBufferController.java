@@ -17,6 +17,9 @@ import javax.servlet.http.HttpServletResponse;
 /**
  *
  * @author arthurfernandes
+ * 
+ * <p>This class represents a controller that clears the buffer that contains 
+ * data to be sent to the user</p>
  */
 @WebServlet(name = "ClearBufferController", urlPatterns = {"/Poc2/ClearBufferController"})
 public class ClearBufferController extends HttpServlet {
@@ -34,16 +37,13 @@ public class ClearBufferController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ClearBufferController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ClearBufferController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            /*Clears buffer*/
+            if(true){
+                out.println("success");
+            }
+            else{/*errors*/
+                out.println("failed");
+            }
         }
     }
 

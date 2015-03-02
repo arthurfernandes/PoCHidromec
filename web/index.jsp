@@ -79,7 +79,7 @@ and open the template in the editor.
                 <label class="big_text_box">Dado Recebido</label><br/>
                 <textarea class="input-sm input_text input_text_resposta" id="dado_recebido" rows="1"></textarea>
                 <br>
-                <button class="btn btn-lg">Clear Buffer</button>
+                <button class="btn btn-lg" onclick="clear_buffer()">Clear Buffer</button>
             </div>
             
             <div class="response_div other_functions">

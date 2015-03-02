@@ -43,20 +43,26 @@ function sendMessage(label,message,encoding){
 
 
     xmlhttp.onreadystatechange = function(){
-        var innerText;
+        var innerText = "";
         if((xmlhttp.readyState === 4) && (xmlhttp.status === 200)){
             innerText = xmlhttp.responseText;
 
         }
         else if(xmlhttp.readyState === 3){
-            innerText = "Processando sua requisição.";
-
+            if(!(innerText.replace("\n","") == "failed")){
+                innerText = "Processando sua requisição.";
+            }
         }
         else if(xmlhttp.status === 404){
             innerText = "Erro ao processar sua requisição.";
         }
 
-        document.getElementById("dado_enviado").value = innerText;
+        if(innerText.replace("\n","") == "failed"){
+            window.alert("A mensagem está mal formatada.")
+        }
+        else{
+            document.getElementById("dado_enviado").value = innerText;
+        }
     };
 
     xmlhttp.open("GET","Poc2/ReceivedMessageController?label="+label+"&message="+message+"&encoding="+encoding,true);

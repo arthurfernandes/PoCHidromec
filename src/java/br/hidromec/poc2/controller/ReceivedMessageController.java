@@ -42,13 +42,39 @@ public class ReceivedMessageController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
+
             final String label = request.getParameter("label");
             final String message = request.getParameter("message");
             final String encoding = request.getParameter("encoding");
             
-            out.println("label"+label+"message:"+message+"encoding"+encoding);
-            
+            /*Test to check if the request contains all parameters*/
+            if(label != null && message!= null && encoding != null){
+                if(label.trim().equals("")){
+                    out.println("failed");
+                    return;
+                }
+                
+                if(message.trim().equals("")){
+                    out.println("failed");
+                    return;
+                }
+                
+                if(encoding.equals("ascii")){
+                    /*Message in ascii*/
+                }
+                else if(encoding.equals("hexa")){
+                    /*Message in hexa*/
+                }
+                else{
+                    out.println("failed");
+                    return;
+                }
+                
+                out.println("label: "+label+"\nmessage: "+message+"\nencoding: "+encoding);
+            }
+            else{
+                out.println("failed");
+            }
         }
     }
 

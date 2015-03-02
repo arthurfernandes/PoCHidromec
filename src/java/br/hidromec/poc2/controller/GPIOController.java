@@ -17,6 +17,9 @@ import javax.servlet.http.HttpServletResponse;
 /**
  *
  * @author arthurfernandes
+ * 
+ * <p>This class represents the controller for the GPIO<p>
+ * The user requests a specified gpio (1-8) to be ON/OFF.
  */
 @WebServlet(name = "GPIOController", urlPatterns = {"/Poc2/GPIOController"})
 public class GPIOController extends HttpServlet {
@@ -34,16 +37,41 @@ public class GPIOController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet GPIOController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet GPIOController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            final String gpio = request.getParameter("gpio");
+            final String onOff = request.getParameter("set");
+            
+            /*Check if the request contains all parameters*/
+            if(gpio != null && onOff != null){
+                /*Get gpioIndex*/
+                int gpioIndex;
+                try{
+                    gpioIndex = Integer.parseInt(gpio);
+                }
+                catch(NumberFormatException e){
+                    out.println("failed");
+                    return;
+                }
+                
+                /*Get on/off as boolean - On means true, Off means false*/
+                final boolean setUnsetBoolean;
+                switch (onOff) {
+                    case "true":
+                        setUnsetBoolean = true;
+                        break;
+                    case "false":
+                        setUnsetBoolean = false;
+                        break;
+                    default:
+                        out.println("failed");
+                        return;
+                }
+                
+                /*Do GPIO communication*/
+                out.println("success");
+            }
+            else{
+                out.println("failed");
+            }
         }
     }
 

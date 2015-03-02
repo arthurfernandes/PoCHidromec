@@ -24,7 +24,7 @@ function saveMessage(){
     var cell4 = row.insertCell(3);
     var cell5 = row.insertCell(4);
     var rowId = table.rows.length;
-    updateMessageNumber(table)
+    updateMessageNumber(table);
     cell1.innerHTML = rowId;
     cell2.innerHTML = document.getElementById('label').value;
     cell3.innerHTML = document.getElementById('message').value;

@@ -64,6 +64,17 @@ public class ReceivedMessageController extends HttpServlet {
                 }
                 else if(encoding.equals("hexa")){
                     /*Message in hexa*/
+                    /*Validation*/
+                    
+                    int messageInHexa;
+                    try{
+                        messageInHexa = Integer.parseInt(message,16);
+                    }
+                    catch(NumberFormatException e){
+                         out.println("failed");
+                         return;
+                    }
+                    
                 }
                 else{
                     out.println("failed");

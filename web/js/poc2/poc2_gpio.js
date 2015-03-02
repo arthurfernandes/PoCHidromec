@@ -33,7 +33,8 @@ function gpio(id,set){
             window.alert("Sucesso.");
         }
     };
-
-    xmlhttp.open("GET","Poc2/GPIOController",true);
+    
+    xmlhttp.open("GET","Poc2/GPIOController?gpio="+id+"&set="+set,true);
+    
     xmlhttp.send();
 }

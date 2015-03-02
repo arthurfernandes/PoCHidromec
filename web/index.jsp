@@ -43,10 +43,10 @@ and open the template in the editor.
                 </div>
                 <br>
                 <div>
-                    <label class="big_text_box">Message</label>
+                    <label class="big_text_box">Mensagem</label>
                     <textarea class="input_text" id="message" rows="1"></textarea> 
-                    <button type="button" class="btn btn-lg" id="save_message" onclick="saveMessage()">Save</button>
-                    <button type="button" class="btn btn-lg" id="send_message" onclick="sendMessageDefault()">Send</button>
+                    <button type="button" class="btn btn-lg" id="save_message" onclick="saveMessage()">Salvar</button>
+                    <button type="button" class="btn btn-lg" id="send_message" onclick="sendMessageDefault()">Enviar</button>
                 </div>
                 <br>
                 
@@ -59,9 +59,9 @@ and open the template in the editor.
                         <tr>
                             <th>#</th>
                             <th>LABEL</th>
-                            <th>MESSAGES</th>
-                            <th>DELETE</th>
-                            <th>SEND</th>
+                            <th>MENSAGENS</th>
+                            <th>DELETAR</th>
+                            <th>ENVIAR</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -79,7 +79,7 @@ and open the template in the editor.
                 <label class="big_text_box">Dado Recebido</label><br/>
                 <textarea class="input-sm input_text input_text_resposta" id="dado_recebido" rows="1"></textarea>
                 <br>
-                <button class="btn btn-lg" onclick="clear_buffer()">Clear Buffer</button>
+                <button class="btn btn-lg" onclick="clear_buffer()">Limbar Buffer</button>
             </div>
             
             <div class="response_div other_functions">

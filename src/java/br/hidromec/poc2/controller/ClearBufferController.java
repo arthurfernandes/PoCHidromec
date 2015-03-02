@@ -8,7 +8,6 @@ package br.hidromec.poc2.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Random;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author arthurfernandes
  */
-@WebServlet(name = "SendCommandController", urlPatterns = {"/SendCommandController"})
-public class SendCommandController extends HttpServlet {
+@WebServlet(name = "ClearBufferController", urlPatterns = {"/Poc2/ClearBufferController"})
+public class ClearBufferController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,10 +34,16 @@ public class SendCommandController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            Random rand = new Random();
-            int i = rand.nextInt();
             /* TODO output your page here. You may use following sample code. */
-            out.print("Message: " + i);
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet ClearBufferController</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet ClearBufferController at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
 

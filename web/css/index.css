@@ -42,12 +42,21 @@ html,body,#wrapper{
     border: inset rgb(0,0,0);
     border-radius: 10px;
     position: relative;
-    top: 24px;
+    top: 16px;
     width: inherit;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 16px;
+    font-size: 26px;
     color: #333333;
     max-width: 50%;
+}
+
+
+.input_text_resposta{
+    margin-top: 6px;
+    width:80%;
+    max-width: 80%;
+    font-size: 18px;
+    top: 0px;
 }
 
 .custom_label{
@@ -97,13 +106,6 @@ html,body,#wrapper{
     font-size: 50px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     
-}
-
-.input_text_resposta{
-    margin-top: 6px;
-    width:80%;
-    max-width: 80%;
-    top: 0px;
 }
 
 .audio_div{

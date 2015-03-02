@@ -3,10 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/arthurfernandes/Documents/PROJETOS/ProjetosProfissionais/HidroMec_StationFlex/PoCs/PoC_Comunicacoes/PoC2/src/java/br/hidromec/poc2/controller/SendMessageController.java</file>
-            <file>file:/Users/arthurfernandes/Documents/PROJETOS/ProjetosProfissionais/HidroMec_StationFlex/PoCs/PoC_Comunicacoes/PoC2/src/java/br/hidromec/poc2/controller/SendCommandController.java</file>
-            <file>file:/Users/arthurfernandes/Documents/PROJETOS/ProjetosProfissionais/HidroMec_StationFlex/PoCs/PoC_Comunicacoes/PoC2/web/index.jsp</file>
             <file>file:/Users/arthurfernandes/Documents/PROJETOS/ProjetosProfissionais/HidroMec_StationFlex/PoCs/PoC_Comunicacoes/PoC2/src/java/br/hidromec/poc2/controller/SaveMessageController.java</file>
+            <file>file:/Users/arthurfernandes/Documents/PROJETOS/ProjetosProfissionais/HidroMec_StationFlex/PoCs/PoC_Comunicacoes/PoC2/web/index.jsp</file>
         </group>
     </open-files>
 </project-private>

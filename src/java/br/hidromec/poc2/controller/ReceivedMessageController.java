@@ -17,9 +17,17 @@ import javax.servlet.http.HttpServletResponse;
 /**
  *
  * @author arthurfernandes
+ * <p>This class represents the controller for all Messages sent by the user.</p>
+ * A message contains:
+ * Label.
+ * Message.
+ * Encoding.
+ * 
+ * The encoding of a message is either ASCII or HEXA.
+ *     
  */
-@WebServlet(name = "SendMessageController", urlPatterns = {"/SendMessageController"})
-public class SendMessageController extends HttpServlet {
+@WebServlet(name = "ReceivedMessageController", urlPatterns = {"/Poc2/ReceivedMessageController"})
+public class ReceivedMessageController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

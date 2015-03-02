@@ -43,7 +43,7 @@ public class SendDataController extends HttpServlet {
             Random rand = new Random();
             int i = rand.nextInt();
             
-            out.println("Message: " + i);
+            out.print("Message: " + i);
         }
     }
 

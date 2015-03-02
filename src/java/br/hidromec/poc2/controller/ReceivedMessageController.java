@@ -50,12 +50,12 @@ public class ReceivedMessageController extends HttpServlet {
             /*Test to check if the request contains all parameters*/
             if(label != null && message!= null && encoding != null){
                 if(label.trim().equals("")){
-                    out.println("failed");
+                    out.print("failed");
                     return;
                 }
                 
                 if(message.trim().equals("")){
-                    out.println("failed");
+                    out.print("failed");
                     return;
                 }
                 
@@ -71,20 +71,20 @@ public class ReceivedMessageController extends HttpServlet {
                         messageInHexa = Integer.parseInt(message,16);
                     }
                     catch(NumberFormatException e){
-                         out.println("failed");
+                         out.print("failed");
                          return;
                     }
                     
                 }
                 else{
-                    out.println("failed");
+                    out.print("failed");
                     return;
                 }
                 
-                out.println("label: "+label+"\nmessage: "+message+"\nencoding: "+encoding);
+                out.print("label: "+label+"\nmessage: "+message+"\nencoding: "+encoding);
             }
             else{
-                out.println("failed");
+                out.print("failed");
             }
         }
     }

@@ -39,10 +39,10 @@ public class ClearBufferController extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /*Clears buffer*/
             if(true){
-                out.println("success");
+                out.print("success");
             }
             else{/*errors*/
-                out.println("failed");
+                out.print("failed");
             }
         }
     }

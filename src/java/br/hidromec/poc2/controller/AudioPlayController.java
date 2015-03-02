@@ -39,10 +39,10 @@ public class AudioPlayController extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /*Plays audio command*/
             if(true){
-                out.println("success");
+                out.print("success");
             }
             else{
-                out.println("failed");
+                out.print("failed");
             }
         }
     }

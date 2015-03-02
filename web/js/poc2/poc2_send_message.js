@@ -49,9 +49,7 @@ function sendMessage(label,message,encoding){
 
         }
         else if(xmlhttp.readyState === 3){
-            if(!(innerText.replace("\n","") == "failed")){
-                innerText = "Processando sua requisição.";
-            }
+            
         }
         else if(xmlhttp.status === 404){
             innerText = "Erro ao processar sua requisição.";

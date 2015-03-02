@@ -48,7 +48,7 @@ public class GPIOController extends HttpServlet {
                     gpioIndex = Integer.parseInt(gpio);
                 }
                 catch(NumberFormatException e){
-                    out.println("failed");
+                    out.print("failed");
                     return;
                 }
                 
@@ -62,15 +62,15 @@ public class GPIOController extends HttpServlet {
                         setUnsetBoolean = false;
                         break;
                     default:
-                        out.println("failed");
+                        out.print("failed");
                         return;
                 }
                 
                 /*Do GPIO communication*/
-                out.println("success");
+                out.print("success");
             }
             else{
-                out.println("failed");
+                out.print("failed");
             }
         }
     }

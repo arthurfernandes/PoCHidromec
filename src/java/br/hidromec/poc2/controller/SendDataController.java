@@ -8,7 +8,7 @@ package br.hidromec.poc2.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Random;
+//import java.util.Random;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,10 +40,7 @@ public class SendDataController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            Random rand = new Random();
-            int i = rand.nextInt();
-            
-            out.print("Message: " + i);
+           out.print("Message: " + SerialComm.getInputBuffer());
         }
     }
 

@@ -38,7 +38,8 @@ public class ClearBufferController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /*Clears buffer*/
-            if(true){
+            
+            if(SerialComm.clearBuffer()){
                 out.print("success");
             }
             else{/*errors*/

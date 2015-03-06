@@ -8,6 +8,7 @@ package br.hidromec.poc2.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.lang.Runtime;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,6 +39,9 @@ public class AudioPlayController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /*Plays audio command*/
+            AudioHandler audio = new AudioHandler();
+            audio.play();
+
             if(true){
                 out.print("success");
             }

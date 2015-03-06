@@ -67,7 +67,13 @@ public class GPIOController extends HttpServlet {
                 }
                 
                 /*Do GPIO communication*/
-                out.print("success");
+                GpioHandler gpio_handler = new GpioHandler();
+                if(gpio_handler.onOff(gpioIndex, setUnsetBoolean)){
+                    out.print("success");
+                }
+                else{
+                    out.print("failed");
+                }
             }
             else{
                 out.print("failed");

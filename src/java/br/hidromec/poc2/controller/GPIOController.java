@@ -44,7 +44,7 @@ public class GPIOController extends HttpServlet {
             if(gpio != null && onOff != null){
                 /*Get gpioIndex*/
                 int gpioIndex;
-                try{
+                try {
                     gpioIndex = Integer.parseInt(gpio);
                 }
                 catch(NumberFormatException e){
@@ -68,6 +68,7 @@ public class GPIOController extends HttpServlet {
                 
                 /*Do GPIO communication*/
                 GpioHandler gpio_handler = new GpioHandler();
+                
                 if(gpio_handler.onOff(gpioIndex, setUnsetBoolean)){
                     out.print("success");
                 }

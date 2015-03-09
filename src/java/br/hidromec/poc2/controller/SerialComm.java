@@ -12,14 +12,14 @@ import gnu.io.SerialPort;
 import gnu.io.UnsupportedCommOperationException;
 
 public class SerialComm {
-    static String inputBuffer = new String();
+    static String inputBuffer = "";
 
     static String getInputBuffer() {
         return inputBuffer;
     }
     OutputStream serialOutputstream;
     static SerialPort serialPort;
-    int DATA_RATE = 115200;
+    int DATA_RATE = 5000000;
     int TIME_OUT = 2000;
 
     void connect(String portName) {

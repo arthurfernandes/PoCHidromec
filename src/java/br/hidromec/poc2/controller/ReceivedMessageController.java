@@ -51,7 +51,7 @@ public class ReceivedMessageController extends HttpServlet {
 
 			    
                             // Open port
-			    serial_port.connect("/dev/ttymxc0");
+			    serial_port.connect("/dev/ttymxc1");
 
 			    /*Test to check if the request contains all parameters*/
 			    if(label != null && message!= null && encoding != null){
@@ -68,7 +68,9 @@ public class ReceivedMessageController extends HttpServlet {
 
                                 if(encoding.equals("ascii")){
                                     /*Message in ascii*/
+                                    out.print("Acima!!");
                                     serial_port.write(message);
+                                    out.print("Abaixo!!");
                                 }                          
                                 else if(encoding.equals("hexa")){
                                     /*Message in hexa*/

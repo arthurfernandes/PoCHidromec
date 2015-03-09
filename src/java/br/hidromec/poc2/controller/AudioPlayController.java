@@ -8,7 +8,6 @@ package br.hidromec.poc2.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.lang.Runtime;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

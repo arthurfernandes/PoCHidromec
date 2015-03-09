@@ -49,9 +49,6 @@ public class ReceivedMessageController extends HttpServlet {
 
 			    SerialComm serial_port = new SerialComm(); 
 
-			    
-                            // Open port
-			    serial_port.connect("/dev/ttymxc1");
 
 			    /*Test to check if the request contains all parameters*/
 			    if(label != null && message!= null && encoding != null){
@@ -68,9 +65,7 @@ public class ReceivedMessageController extends HttpServlet {
 
                                 if(encoding.equals("ascii")){
                                     /*Message in ascii*/
-                                    out.print("Acima!!");
                                     serial_port.write(message);
-                                    out.print("Abaixo!!");
                                 }                          
                                 else if(encoding.equals("hexa")){
                                     /*Message in hexa*/
@@ -95,10 +90,7 @@ public class ReceivedMessageController extends HttpServlet {
                             }
                             else{
                                 out.print("Void label, message or encoding");
-			    }
-
-			    // close port
-			    serial_port.close();  
+			    } 
 		    } catch (NullPointerException e){
 			    System.err.println(e.toString());
 			    System.out.print("Null Pointer!\nPerhaps the port is not initilized");

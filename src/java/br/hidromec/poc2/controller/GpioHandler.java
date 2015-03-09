@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 class GpioHandler{
     boolean onOff(Integer gpio_index, boolean setUnset){
         try {
-            // gpio <gpio number> <1:set 0:unset>
+            // gpio <gpio number> <1:set 0:unset>            
             if(setUnset){
                 Runtime.getRuntime().exec("/bin/gpio " + gpio_index + " 1");
                 System.out.println("gpio " + gpio_index + " set");
